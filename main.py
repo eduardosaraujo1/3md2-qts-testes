@@ -6,8 +6,8 @@ import shutil
 app = Flask(__name__)
 
 # Configuração das pastas
-MAIN_DIR = "main"
-OVERFLOW_DIR = "overflow"
+MAIN_DIR = "storage/main"
+OVERFLOW_DIR = "storage/overflow"
 MAX_MAIN_FILES = 5
 MAX_TOTAL_FILES = 10
 
@@ -186,8 +186,7 @@ def reset_system():
         ensure_directories()
         
         return jsonify({
-            "message": "Sistema resetado - todos os arquivos foram deletados",
-            "warning": "VULNERABILIDADE: Esta operação não requer autenticação!"
+            "message": "Sistema resetado - todos os arquivos foram deletados"
         }), 200
     
     except Exception as e:
