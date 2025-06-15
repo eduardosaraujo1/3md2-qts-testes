@@ -48,3 +48,11 @@ A validação vai considerar:
 <details>
 <summary>Teste de Segurança</summary>
 </details>
+
+<details>
+<summary>Teste de Carga</summary>
+</details>
+
+<details>
+<summary>Teste de Capacidade</summary>
+</details>
