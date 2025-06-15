@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comparador de Performance Sorting</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>⚡ Comparador de Performance Sorting</h1>
+
+      <div class="info-panel">
+        <div class="criteria-info">
+          Critério de Performance: <span id="criteriaValue">1000</span>ms
+        </div>
+        <div class="criteria-description">
+          Tempos acima do critério são destacados em vermelho, abaixo em verde
+        </div>
+      </div>
+
+      <div class="control-panel">
+        <button id="startBtn" class="start-btn">Iniciar Teste</button>
+        <div id="status" class="status"></div>
+      </div>
+
+      <div class="results-container">
+        <table id="resultsTable">
+          <thead>
+            <tr>
+              <th>Tamanho do Array</th>
+              <th>
+                Quick Sort (ms)
+                <input type="checkbox" name="" id="quick" checked />
+              </th>
+              <th>
+                Bubble Sort (ms)
+                <input type="checkbox" name="" id="bubble" checked />
+              </th>
+              <th>
+                Stooge Sort (ms)
+                <input type="checkbox" name="" id="stooge" checked />
+              </th>
+            </tr>
+          </thead>
+          <tbody id="resultsBody"></tbody>
+        </table>
+      </div>
+
+      <div class="legend">
+        <div class="legend-item">
+          <div class="legend-color legend-good"></div>
+          <span
+            >Tempo dentro do critério (≤
+            <span class="criteria-text">1000</span>ms)</span
+          >
+        </div>
+        <div class="legend-item">
+          <div class="legend-color legend-bad"></div>
+          <span
+            >Tempo acima do critério (>
+            <span class="criteria-text">1000</span>ms)</span
+          >
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
