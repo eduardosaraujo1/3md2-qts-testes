@@ -63,3 +63,15 @@ Com pytest, serão implementados:
 - Teste de login com credenciais válidas e inválidas.
 - Teste de função de compra (independente da interface visual), para garantir que o pedido seja registrado.
 </details>
+
+<details>
+<summary>Teste de Sistema</summary>
+</details>
+
+<details>
+<summary>Teste de Componente</summary>
+</details>
+
+<details>
+<summary>Teste de Usabilidade</summary>
+</details>
