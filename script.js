@@ -1,6 +1,7 @@
 const CRITERIA = 200;
 const MAX_ARRAY_SIZE = 15000;
 const STEP = 100;
+const QUANTIDADE_TESTES = 1;
 
 document.getElementById("criteriaValue").textContent = CRITERIA;
 document.querySelectorAll(".criteria-text").forEach((el) => {
@@ -88,10 +89,10 @@ function bubbleSort(arr) {
   return arr;
 }
 
-function measureTime(func, arr, num = 3) {
+function measureTime(func, arr) {
   let total = 0;
 
-  for (let i = 0; i < num; i++) {
+  for (let i = 0; i < QUANTIDADE_TESTES; i++) {
     const arrCopy = [...arr]; // Garante que func não altere o array original
     const start = performance.now();
     func(arrCopy);
@@ -99,7 +100,7 @@ function measureTime(func, arr, num = 3) {
     total += end - start;
   }
 
-  const average = total / num;
+  const average = total / QUANTIDADE_TESTES;
   return Math.round(average * 100) / 100; // Arredonda para 2 casas decimais
 }
 
