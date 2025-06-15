@@ -8,8 +8,8 @@ app = Flask(__name__)
 # Configuração das pastas
 MAIN_DIR = "storage/main"
 OVERFLOW_DIR = "storage/overflow"
-MAX_MAIN_FILES = 5
-MAX_TOTAL_FILES = 10
+MAX_MAIN_FILES = 500
+MAX_TOTAL_FILES = 1000
 
 def ensure_directories():
     """Garante que os diretórios existam"""

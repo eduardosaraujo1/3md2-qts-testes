@@ -35,21 +35,6 @@ A validação vai considerar:
 - Testes funcionais: login e compra funcionando corretamente.
 - Testes de aceitação simulada: execução manual das três interfaces por alunos (ou observadores) e análise da experiência.
 
-### Critérios de sucesso
-
-- O usuário entende como navegar e comprar.
-- O sistema responde conforme esperado.
-- A interface facilita ou dificulta a jornada de compra.
-
-### Fluxo para o teste
-
-- Rodar a aplicação com python `login.py`.
-- Após login bem-sucedido, escolher qual versão da loja será testada (A, B).
-- Realizar o processo de compra e avaliar:
-  - Funcionamento correto.
-  - Clareza das instruções.
-  - Intuitividade da interface.
-- Em seguida, opcionalmente, executar `pytest` para validar ambos dos sistemas
 </details>
 
 <details>
