@@ -131,13 +131,13 @@ async function runTest() {
   const startBtn = document.getElementById("startBtn");
   const status = document.getElementById("status");
   const tbody = document.getElementById("resultsBody");
-  const algs = getEnabledAlgs();
 
   startBtn.disabled = true;
   startBtn.innerHTML = 'Testando... <div class="loading"></div>';
   tbody.innerHTML = "";
 
   for (let size = STEP; size <= MAX_ARRAY_SIZE; size += STEP) {
+    const algs = getEnabledAlgs();
     status.textContent = `Testando array de tamanho ${size.toLocaleString()}...`;
 
     // Pequeno delay para atualizar a UI
