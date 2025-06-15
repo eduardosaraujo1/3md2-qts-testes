@@ -12,6 +12,9 @@ def main():
 
     if autenticar(usuario, senha):
         print("Login bem-sucedido!")
+        print("===================")
+        print("Teste de Validação")
+        print("===================")
         print("Escolha a versão da loja: [A] Números | [B] Setas")
         versao = input("Versão: ").upper()
         if versao == "A":

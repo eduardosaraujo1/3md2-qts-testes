@@ -9,7 +9,7 @@ def test_compra_simples(monkeypatch):
 
 def test_compra_completa(monkeypatch):
     entradas = iter(["4", "0", "0"])
-    monkeypatch.setattr("builtins.input", lambda: next(entradas))
+    monkeypatch.setattr("builtins.input", lambda *_: next(entradas))
 
-    main();
+    main()
     
