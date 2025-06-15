@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Admin - Configurações</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>⚙️ Dashboard Admin</h1>
+        <p>Painel de configurações do sistema</p>
+      </header>
+
+      <div class="dashboard-grid">
+        <!-- Configurações Gerais -->
+        <div class="config-card">
+          <h3><span class="icon">🎨</span> Aparência & Tema</h3>
+
+          <div class="config-item">
+            <label>Tema do Sistema</label>
+            <div class="description">Escolha o tema visual padrão</div>
+            <select class="config-select" id="theme-select">
+              <option value="light">Claro</option>
+              <option value="dark">Escuro</option>
+              <option value="auto">Automático</option>
+            </select>
+          </div>
+
+          <div class="config-item">
+            <label>Cor Primária</label>
+            <div class="description">Cor principal da interface</div>
+            <input
+              type="color"
+              class="config-input"
+              id="primary-color"
+              value="#667eea"
+            />
+          </div>
+
+          <div class="config-item">
+            <label>Modo Compacto</label>
+            <div class="description">
+              Interface mais densa para telas pequenas
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="compact-mode" />
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Configurações do Sistema -->
+        <div class="config-card">
+          <h3><span class="icon">⚡</span> Sistema & Performance</h3>
+
+          <div class="config-item">
+            <label>Cache Ativo</label>
+            <div class="description">
+              Ativar sistema de cache para melhor performance
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="cache-enabled" checked />
+              <span class="slider"></span>
+            </label>
+          </div>
+
+          <div class="config-item">
+            <label>Limite de Requisições (por minuto)</label>
+            <div class="description">
+              Máximo de requisições permitidas por minuto
+            </div>
+            <input
+              type="number"
+              class="config-input"
+              id="rate-limit"
+              value="100"
+              min="10"
+              max="1000"
+            />
+          </div>
+
+          <div class="config-item">
+            <label>Logs Detalhados</label>
+            <div class="description">Ativar logs verbosos para debugging</div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="verbose-logs" />
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Configurações de Usuário -->
+        <div class="config-card">
+          <h3><span class="icon">👥</span> Usuários & Segurança</h3>
+
+          <div class="config-item">
+            <label>Registro de Novos Usuários</label>
+            <div class="description">
+              Permitir que novos usuários se registrem
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="user-registration" checked />
+              <span class="slider"></span>
+            </label>
+          </div>
+
+          <div class="config-item">
+            <label>Autenticação Dois Fatores</label>
+            <div class="description">Exigir 2FA para todos os usuários</div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="two-factor-auth" />
+              <span class="slider"></span>
+            </label>
+          </div>
+
+          <div class="config-item">
+            <label>Sessão Expira Em (horas)</label>
+            <div class="description">
+              Tempo até a sessão expirar automaticamente
+            </div>
+            <input
+              type="number"
+              class="config-input"
+              id="session-timeout"
+              value="24"
+              min="1"
+              max="168"
+            />
+          </div>
+        </div>
+
+        <!-- Configurações de Notificação -->
+        <div class="config-card">
+          <h3><span class="icon">🔔</span> Notificações</h3>
+
+          <div class="config-item">
+            <label>E-mail de Notificações</label>
+            <div class="description">
+              Endereço para receber notificações do sistema
+            </div>
+            <input
+              type="email"
+              class="config-input"
+              id="notification-email"
+              value="admin@sistema.com"
+            />
+          </div>
+
+          <div class="config-item">
+            <label>Notificações Push</label>
+            <div class="description">Ativar notificações push no navegador</div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="push-notifications" checked />
+              <span class="slider"></span>
+            </label>
+          </div>
+
+          <div class="config-item">
+            <label>Frequência de Relatórios</label>
+            <div class="description">Com que frequência enviar relatórios</div>
+            <select class="config-select" id="report-frequency">
+              <option value="daily">Diário</option>
+              <option value="weekly" selected>Semanal</option>
+              <option value="monthly">Mensal</option>
+              <option value="never">Nunca</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Status do Sistema -->
+      <div class="config-card">
+        <h3><span class="icon">📊</span> Status do Sistema</h3>
+        <div
+          style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+          "
+        >
+          <div>
+            <label>Cache</label>
+            <div class="status-indicator status-active" id="cache-status">
+              <span>●</span> Ativo
+            </div>
+          </div>
+          <div>
+            <label>Banco de Dados</label>
+            <div class="status-indicator status-active">
+              <span>●</span> Conectado
+            </div>
+          </div>
+          <div>
+            <label>API Externa</label>
+            <div class="status-indicator status-active">
+              <span>●</span> Online
+            </div>
+          </div>
+          <div>
+            <label>Backup</label>
+            <div class="status-indicator status-inactive">
+              <span>●</span> Pendente
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Botões de Ação -->
+      <div class="button-group">
+        <button class="btn btn-primary" onclick="saveConfiguration()">
+          💾 Salvar Configurações
+        </button>
+        <button class="btn btn-secondary" onclick="loadConfiguration()">
+          🔄 Recarregar
+        </button>
+        <button class="btn btn-secondary" onclick="exportConfiguration()">
+          📤 Exportar JSON
+        </button>
+        <button class="btn btn-danger" onclick="resetConfiguration()">
+          🔄 Resetar Padrões
+        </button>
+      </div>
+
+      <!-- Preview JSON -->
+      <div class="config-card">
+        <h3><span class="icon">📄</span> Preview da Configuração (JSON)</h3>
+        <div class="json-preview" id="json-preview"></div>
+      </div>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
