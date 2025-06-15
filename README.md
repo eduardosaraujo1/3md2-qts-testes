@@ -12,17 +12,12 @@ Sistema simples criado com o intuito da apresentação sobre testes funcionais e
 
 ## Testes Inclusos
 
-<details>
-<summary>Teste de Validação</summary>
-
 ### Sistema
 
-Um sistema de loja simples, executado em terminal. Ele possui:
+Este sistema é uma API RESTful desenvolvida em Python + Flask, que permite armazenamento, leitura, atualização e exclusão de arquivos de texto enviados por meio de requisições HTTP. Por padrão, somente 5 arquivos são permitidos simultaneamente, mas caso exatamente 5 sejam armazenados, o sistema automaticamente "escalará" para permitir até 10 arquivos, salvando-os em uma subpasta diferente (simulando outro servidor).
 
-- Uma tela de login com usuário e senha hardcoded.
-- Três versões da interface de loja, que o usuário pode acessar após o login:
-  - Versão A (Loja A): o usuário digita o número do produto para comprar.
-  - Versão B (Loja B): o usuário navega pelos produtos com as teclas ↑/↓ ou J/K, e pressiona ENTER para comprar.
+<details>
+<summary>Teste de Stress</summary>
 
 ### Necessidades do Teste
 
@@ -55,23 +50,16 @@ A validação vai considerar:
   - Clareza das instruções.
   - Intuitividade da interface.
 - Em seguida, opcionalmente, executar `pytest` para validar ambos dos sistemas
-
-### Testes automáticos planejados
-
-Com pytest, serão implementados:
-
-- Teste de login com credenciais válidas e inválidas.
-- Teste de função de compra (independente da interface visual), para garantir que o pedido seja registrado.
 </details>
 
 <details>
-<summary>Teste de Sistema</summary>
+<summary>Teste de Escalabilidade</summary>
 </details>
 
 <details>
-<summary>Teste de Componente</summary>
+<summary>Teste de Confiabilidade</summary>
 </details>
 
 <details>
-<summary>Teste de Usabilidade</summary>
+<summary>Teste de Segurança</summary>
 </details>
