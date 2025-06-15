@@ -28,10 +28,8 @@ Um sistema de loja simples, executado em terminal. Ele possui:
 
 Verificar:
 
-- Se a autenticação funciona corretamente.
-- Se o sistema permite realizar uma compra com sucesso.
-- Se a interface atende à necessidade de usabilidade e clareza esperadas para diferentes perfis de usuários.
-- Se diferentes modos de uso realmente facilitam ou dificultam a experiência (UX).
+- Se o sistema segue funcionando (refazer os testes anteriores)
+- Se a mudança feita no sistema
 
 ### Plano de testes
 

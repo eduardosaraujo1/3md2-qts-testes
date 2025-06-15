@@ -14,6 +14,8 @@ def comprar(produto):
         pass
     os.system('cls' if os.name == 'nt' else 'clear')
 
+    return produto;
+
 def main():
     while True:
         mostrar_menu()
@@ -21,7 +23,7 @@ def main():
         if escolha == "0":
             break
         elif escolha.isdigit() and 1 <= int(escolha) <= len(produtos):
-            comprar(produtos[int(escolha) - 1])
+            return comprar(produtos[int(escolha) - 1])
         else:
             print("Opção inválida.")
 
