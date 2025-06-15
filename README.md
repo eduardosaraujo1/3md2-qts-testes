@@ -1,6 +1,6 @@
-# Sistema de Loja QTS
+# Testes para Cifra da Nlogônia
 
-Sistema simples criado com o intuito da apresentação sobre testes funcionais e não funcionais de Qualidade e Teste de Software.
+Sistema simples criado com o intuito da apresentação sobre o teste uinit[ario]
 
 ## Integrantes
 
@@ -13,65 +13,49 @@ Sistema simples criado com o intuito da apresentação sobre testes funcionais e
 ## Testes Inclusos
 
 <details>
-<summary>Teste de Validação</summary>
+<summary>Teste de Unidade</summary>
 
 ### Sistema
 
-Um sistema de loja simples, executado em terminal. Ele possui:
+Este sistema é um módulo auxiliar para a cifragem de documentos baseada em substituição de consoantes, segundo regras específicas de transformação.
 
-- Uma tela de login com usuário e senha hardcoded.
-- Três versões da interface de loja, que o usuário pode acessar após o login:
-  - Versão A (Loja A): o usuário digita o número do produto para comprar.
-  - Versão B (Loja B): o usuário navega pelos produtos com as teclas ↑/↓ ou J/K, e pressiona ENTER para comprar.
+Alfabeto considerado:
 
-### Necessidades do Teste
+- `a b c d e f g h i j k l m n o p q r s t u v x z`
 
-Verificar:
+Vogais consideradas:
 
-- Se a autenticação funciona corretamente.
-- Se o sistema permite realizar uma compra com sucesso.Add commentMore actions
-- Se a interface atende à necessidade de usabilidade e clareza esperadas para diferentes perfis de usuários.
-- Se diferentes modos de uso realmente facilitam ou dificultam a experiência (UX).
+- `a e i o u`
 
-### Plano de testes
+Regras da cifragem:
 
-A validação vai considerar:
+- Para cada consoante, ela é substituída por três letras, nessa ordem:
+  - A própria consoante original.
+  - A vogal mais próxima da consoante original, com base na distância dentro do alfabeto.
+    - Se a distância for igual entre duas vogais, escolhe-se a que aparece antes no alfabeto.
+  - A próxima consoante no alfabeto, ignorando vogais.
+- Vogais não são modificadas na cifragem.
 
-- Testes funcionais: login e compra funcionando corretamente.
-- Testes de aceitação simulada: execução manual das três interfaces por alunos (ou observadores) e análise da experiência.
+#### Necessidades do Teste
 
-### Critérios de sucesso
+O objetivo dos testes é verificar se as funções auxiliares da lógica de cifragem estão corretas e seguem rigorosamente as regras definidas:
 
-- O usuário entende como navegar e comprar.
-- O sistema responde conforme esperado.
-- A interface facilita ou dificulta a jornada de compra.
+- Identificar se uma letra é vogal (is_vowel)
+- Encontrar a próxima consoante após uma letra dada (next_consoant)
+- Determinar a vogal mais próxima de uma consoante (nearest_vowel)
 
-### Fluxo para o teste
+Todos os testes devem passar sem erros. Caso contrário, o sistema de cifra pode produzir saídas incorretas.
 
-- Rodar a aplicação com python `login.py`.
-- Após login bem-sucedido, escolher qual versão da loja será testada (A, B).
-- Realizar o processo de compra e avaliar:
-  - Funcionamento correto.
-  - Clareza das instruções.
-  - Intuitividade da interface.
-- Em seguida, opcionalmente, executar `pytest` para validar ambos dos sistemas
+#### Plano de Testes
 
-### Testes automáticos planejados
+| Função testada  | Entrada | Saída esperada | Descrição                                                       |
+| --------------- | ------- | -------------- | --------------------------------------------------------------- |
+| `next_consoant` | `'a'`   | `'b'`          | A próxima consoante após `'a'` é `'b'`                          |
+| `next_consoant` | `'d'`   | `'f'`          | A próxima consoante após `'d'` é `'f'`                          |
+| `is_vowel`      | `'e'`   | `true`         | `'e'` está na lista de vogais                                   |
+| `is_vowel`      | `'f'`   | `false`        | `'f'` não está na lista de vogais                               |
+| `nearest_vowel` | `'l'`   | `'i'`          | `'i'` é a vogal mais próxima de `'l'`                           |
+| `nearest_vowel` | `'c'`   | `'a'`          | `'c'` está entre `'a'` e `'e'`, mas `'a'` vem antes no alfabeto |
+| `nearest_vowel` | `'z'`   | `'u'`          | `'u'` é a vogal mais próxima de `'z'`                           |
 
-Com pytest, serão implementados:
-
-- Teste de login com credenciais válidas e inválidas.
-- Teste de função de compra (independente da interface visual), para garantir que o pedido seja registrado.
-</details>
-
-<details>
-<summary>Teste de Sistema</summary>
-</details>
-
-<details>
-<summary>Teste de Componente</summary>
-</details>
-
-<details>
-<summary>Teste de Usabilidade</summary>
 </details>
