@@ -69,9 +69,5 @@ Com pytest, serão implementados:
 </details>
 
 <details>
-<summary>Teste de Componente</summary>
-</details>
-
-<details>
 <summary>Teste de Usabilidade</summary>
 </details>
