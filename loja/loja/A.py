@@ -1,6 +1,7 @@
 import os
 
-produtos = ["Camiseta", "Tênis", "Boné", "Calça", "Relógio"]
+# Adicionado novo item no meio ao em vez do final, quebrando teste compra A
+produtos = ["Camiseta", "Tênis", "Boné", "Bermuda", "Calça", "Relógio"]
 
 def mostrar_menu():
     print("\nProdutos disponíveis:")

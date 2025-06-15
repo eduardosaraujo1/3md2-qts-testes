@@ -28,8 +28,7 @@ Um sistema de loja simples, executado em terminal. Ele possui:
 
 Verificar:
 
-- Se o sistema segue funcionando (refazer os testes anteriores)
-- Se a mudança feita no sistema
+- Se os componentes anteriores seguem funcionando (refazer os testes anteriores)
 
 ### Plano de testes
 
