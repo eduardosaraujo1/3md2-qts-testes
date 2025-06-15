@@ -21,19 +21,11 @@ Este sistema é uma API RESTful desenvolvida em Python + Flask, que permite arma
 
 ### Necessidades do Teste
 
-Verificar:
-
-- Se a autenticação funciona corretamente.
-- Se o sistema permite realizar uma compra com sucesso.Add commentMore actions
-- Se a interface atende à necessidade de usabilidade e clareza esperadas para diferentes perfis de usuários.
-- Se diferentes modos de uso realmente facilitam ou dificultam a experiência (UX).
+...
 
 ### Plano de testes
 
-A validação vai considerar:
-
-- Testes funcionais: login e compra funcionando corretamente.
-- Testes de aceitação simulada: execução manual das três interfaces por alunos (ou observadores) e análise da experiência.
+...
 
 </details>
 
