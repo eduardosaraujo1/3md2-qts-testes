@@ -46,16 +46,6 @@ A validação vai considerar:
 - O sistema responde conforme esperado.
 - A interface facilita ou dificulta a jornada de compra.
 
-### Fluxo para o teste
-
-- Rodar a aplicação com python `login.py`.
-- Após login bem-sucedido, escolher qual versão da loja será testada (A, B).
-- Realizar o processo de compra e avaliar:
-  - Funcionamento correto.
-  - Clareza das instruções.
-  - Intuitividade da interface.
-- Em seguida, opcionalmente, executar `pytest` para validar ambos dos sistemas
-
 ### Testes automáticos planejados
 
 Com pytest, serão implementados:
