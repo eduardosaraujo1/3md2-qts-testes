@@ -78,8 +78,10 @@ h1 {
 
 .results-container {
   overflow-x: auto;
+  overflow-y: auto;
   border: 1px solid #ccc;
   margin-top: 20px;
+  max-height: 80vh;
 }
 
 table {
