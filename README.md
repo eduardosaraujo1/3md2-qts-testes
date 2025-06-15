@@ -1,6 +1,6 @@
-# Fibonnacci - Teste de Desempenho
+# Organizador - Teste de Desempenho
 
-Aplicativo simples criado para comparar a versão recursiva da sequência de fibonacci contra a versão regular
+Aplicativo simples criado para comparar três algorítimos de organizar números em uma pilha
 
 ## Integrantes
 
@@ -17,31 +17,23 @@ Aplicativo simples criado para comparar a versão recursiva da sequência de fib
 
 ### Sistema
 
-Um sistema de loja simples, executado em terminal. Ele possui:
+Funções utilizadas em sistemas de organizar livros por ordem alfabética, chamados "algorítimos de ordenação". Os sistemas são:
 
-- Uma tela de login com usuário e senha hardcoded.
-- Três versões da interface de loja, que o usuário pode acessar após o login:
-  - Versão A (Loja A): o usuário digita o número do produto para comprar.
-  - Versão B (Loja B): o usuário navega pelos produtos com as teclas ↑/↓ ou J/K, e pressiona ENTER para comprar.
+- Quick Sort: Algoritmo eficiente com complexidade O(n log n) em média, usando estratégia de divisão e conquista com pivot.
+- Bubble Sort: Algoritmo ineficiente com complexidade O(n^2) em média
+- Stooge Sort: Algoritmo ineficiente com complexidade O(n^2.7), implementado recursivamente com divisão em terços.
 
 ### Necessidades do Teste
 
 Verificar:
 
-- Se o sistema segue funcionando (refazer os testes anteriores)
-- Se a mudança feita no sistema
+- Se todos os algoritmos de ordenação retornam valores válidos sem quebrarem com o aumento de
+- Identificar qual a carga máxima que pode afetar o algorítmo
+- Verificar como o algorítmo reage a cargas grandes
 
-### Plano de testes
+### Critérios de Sucesso
 
-A validação vai considerar:
-
-- Testes funcionais: login e compra funcionando corretamente.
-- Testes de aceitação simulada: execução manual das três interfaces por alunos (ou observadores) e análise da experiência.
-
-### Critérios de sucesso
-
-- O usuário entende como navegar e comprar.
-- O sistema responde conforme esperado.
-- A interface facilita ou dificulta a jornada de compra.
+- Os algoritmos produzem resultados corretos (arrays completamente ordenados) em 100% dos testes.
+- A diferença de performance entre Quick Sort, Bubble Sort e Stooge Sort é abaixo ou igual ao critério limitador de 200 ms para arrays de 15.000 dígitos
 
 </details>
